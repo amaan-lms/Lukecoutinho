@@ -7,7 +7,8 @@ import Teams from './Teams'
 import Questions from './Questions'
 import Pillars from './Pillars'
 import Explorecourse from './Explorecourse'
-// import CorporateWellnessPrograms from './CorporateWellnessPrograms'
+import CorporateWellnessPrograms from './CorporateWellnessPrograms'
+import Books from './Books'
 
 function Home() {
 
@@ -21,7 +22,8 @@ function Home() {
       <Questions />
       <Pillars />
       <Explorecourse />
-      {/* <CorporateWellnessPrograms /> */}
+      <CorporateWellnessPrograms />
+      <Books />
     </>
   )
 }
