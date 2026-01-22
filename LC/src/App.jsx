@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import Home from './components/Home'
 import OurStory from './pages/About/OurStory'
 import Vision from './pages/About/Vision'
+import IndividualFamilyMasterclass from './pages/About/Workshop/IndividualFamilyMasterclass/Home'
+import CorporateTalks from './pages/About/Workshop/CorporateTalks/Home'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about/story" element={<OurStory />} />
             <Route path="/about/vision" element={<Vision />} />
+            <Route path="/Workshop/IndividualFamilyMasterclass/Home" element={<IndividualFamilyMasterclass />} />
+            <Route path="/Workshop/CorporateTalks/Home" element={<CorporateTalks />} />
           </Routes>
         </main>
         <Footer />

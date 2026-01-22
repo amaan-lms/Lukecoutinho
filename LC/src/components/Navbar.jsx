@@ -45,9 +45,8 @@ const Navbar = () => {
     {
       title: 'Workshops',
       links: [
-        { label: 'Live Sessions', href: '/workshops/live' },
-        { label: 'Corporate Wellness', href: '/workshops/corporate' },
-        { label: 'Past Workshops', href: '/workshops/archive' },
+        { label: 'Individual & Family Masterclass', href: '/Workshop/IndividualFamilyMasterclass/Home' },
+        { label: 'Corporate Talks and Webinars', href: '/Workshop/CorporateTalks/Home' },
       ],
     },
     {
@@ -105,7 +104,7 @@ const Navbar = () => {
                   <ChevronDown size={16} className="ml-1 opacity-40 transition-transform duration-300 group-hover:rotate-180 group-hover:opacity-100" />
                 </button>
 
-                <div className="absolute left-1/2 -translate-x-1/2 mt-3 w-64 bg-white border border-slate-100 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-[110] p-1.5 overflow-hidden">
+                <div className="absolute left-1/2 -translate-x-1/2 mt-3 w-74 bg-white border border-slate-100 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 z-[110] p-1.5 overflow-hidden">
                   <div className="bg-slate-50/50 rounded-xl">
                     {item.links.map((link) => (
                       <Link

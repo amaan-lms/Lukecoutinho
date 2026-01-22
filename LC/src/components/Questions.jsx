@@ -63,25 +63,26 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-slate-100">
+    <section className="py-12 md:py-24 px-4 sm:px-6 bg-slate-100">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Side: Header */}
           <div className="lg:col-span-5">
-            <div className="sticky top-24">
-              <div className="flex items-center gap-2 text-orange-500 mb-6">
+            {/* Sticky disabled on mobile for better scrolling, enabled on lg screens */}
+            <div className="lg:sticky lg:top-24 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-2 text-orange-500 mb-4 lg:mb-6">
                 <HelpCircle size={20} />
-                <span className="text-sm font-black uppercase tracking-[0.3em]">Support Center</span>
+                <span className="text-xs lg:text-sm font-black uppercase tracking-[0.3em]">Support Center</span>
               </div>
-              <h2 className="text-5xl md:text-6xl font-black text-slate-900 leading-tight mb-8">
-                Frequently Asked  <br />
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6 lg:mb-8">
+                Frequently Asked <br className="hidden lg:block" />
                 <span className="text-orange-500 font-light ">Questions</span>
               </h2>
-              <p className="text-slate-500 text-lg leading-relaxed mb-10">
+              <p className="text-slate-500 text-base md:text-lg leading-relaxed mb-8 lg:mb-10 max-w-xl mx-auto lg:mx-0">
                 Unlock the path to a healthier you through our FAQ section, providing insights tailored to guide you on your wellness journey.
               </p>
-              <button className="flex items-center gap-3 px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-orange-500 transition-all shadow-xl group">
+              <button className="flex items-center justify-center lg:justify-start gap-3 w-full sm:w-auto px-8 lg:px-10 py-4 lg:py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-orange-500 transition-all shadow-xl group">
                 READ ALL DOCS 
                 <ArrowRight size={20} className="group-hover:translate-x-2 transition-transform" />
               </button>
@@ -89,31 +90,31 @@ const FAQSection = () => {
           </div>
 
           {/* Right Side: Accordion Tabs */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-4 lg:space-y-6">
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className={`group rounded-[2.5rem] border transition-all duration-500 ${
+                className={`group rounded-[1.5rem] lg:rounded-[2.5rem] border transition-all duration-500 ${
                   openIndex === index 
-                  ? "bg-white border-orange-200 shadow-2xl shadow-orange-500/10" 
+                  ? "bg-white border-orange-200 shadow-xl lg:shadow-2xl lg:shadow-orange-500/10" 
                   : "bg-white/50 border-slate-200 hover:border-slate-300"
                 }`}
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-                  className="w-full p-8 md:p-10 text-left"
+                  className="w-full p-6 md:p-8 lg:p-10 text-left"
                 >
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-orange-500 text-xs font-black uppercase tracking-widest">
+                  <div className="flex items-center justify-between mb-2 lg:mb-3">
+                    <span className="text-orange-500 text-[10px] lg:text-xs font-black uppercase tracking-widest">
                       {faq.heading}
                     </span>
-                    <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
+                    <div className={`flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center transition-all duration-500 ${
                       openIndex === index ? "bg-orange-500 text-white rotate-180" : "bg-slate-200 text-slate-500"
                     }`}>
-                      {openIndex === index ? <Minus size={16} /> : <Plus size={16} />}
+                      {openIndex === index ? <Minus size={14} /> : <Plus size={14} />}
                     </div>
                   </div>
-                  <span className={`text-xl md:text-2xl font-black transition-colors duration-300 ${
+                  <span className={`text-lg md:text-xl lg:text-2xl font-black transition-colors duration-300 block pr-4 ${
                     openIndex === index ? "text-slate-900" : "text-slate-700"
                   }`}>
                     {faq.question}
@@ -122,21 +123,23 @@ const FAQSection = () => {
 
                 <div 
                   className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                    openIndex === index ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+                    openIndex === index ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-8 md:px-10 pb-10 pt-0">
-                    <div className="h-[2px] w-12 bg-orange-500 mb-8 opacity-50"></div>
+                  <div className="px-6 md:px-8 lg:px-10 pb-8 lg:pb-10 pt-0">
+                    <div className="h-[2px] w-10 lg:w-12 bg-orange-500 mb-6 lg:mb-8 opacity-50"></div>
                     
-                    <p className="text-slate-400 font-bold mb-6 italic">{faq.intro}</p>
+                    <p className="text-slate-400 font-bold mb-4 lg:mb-6 italic text-sm lg:text-base">
+                      {faq.intro}
+                    </p>
                     
-                    <div className="grid gap-5">
+                    <div className="grid gap-4 lg:gap-5">
                       {faq.points.map((point, i) => (
-                        <div key={i} className="flex items-start gap-4 group/point">
+                        <div key={i} className="flex items-start gap-3 lg:gap-4 group/point">
                           <div className="mt-1 flex-shrink-0">
-                            <CheckCircle2 size={20} className="text-orange-500 opacity-70 group-hover/point:opacity-100 transition-opacity" />
+                            <CheckCircle2 size={18} className="text-orange-500 opacity-70 group-hover/point:opacity-100 transition-opacity" />
                           </div>
-                          <p className="text-slate-600 text-lg leading-relaxed font-medium">
+                          <p className="text-slate-600 text-sm md:text-base lg:text-lg leading-relaxed font-medium">
                             {point}
                           </p>
                         </div>
