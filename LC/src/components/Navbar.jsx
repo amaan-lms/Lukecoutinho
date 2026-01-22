@@ -30,16 +30,17 @@ const Navbar = () => {
       links: [
         { label: 'Our Story', href: '/about/story' },
         { label: 'Vision & Mission', href: '/about/vision' },
-        { label: 'The Team', href: '/about/team' },
+        { label: 'The Science Behind Our Approach', href: '/about/team' },
+        { label: 'Corporate Social Responsibility(CSR)', href: '/about/team' },
+        { label: 'Media And Awards', href: '/about/team' },
       ],
     },
     {
       title: 'Programs',
       links: [
-        { label: 'Wellness Program', href: '/programs/wellness' },
-        { label: 'Weight Management', href: '/programs/weight' },
-        { label: 'Chronic Disease', href: '/programs/chronic' },
-        { label: 'Mental Health', href: '/programs/mental' },
+        { label: 'Individual & Family', href: '/programs/wellness' },
+        { label: 'Corporate Wellness Program', href: '/programs/weight' },
+        { label: 'Client Sucess Stories', href: '/programs/chronic' },
       ],
     },
     {
@@ -52,9 +53,10 @@ const Navbar = () => {
     {
       title: 'Learn',
       links: [
-        { label: 'Masterclasses', href: '/learn/masterclass' },
-        { label: "Luke's Blog", href: '/learn/blog' },
-        { label: 'E-Books', href: '/learn/books' },
+        { label: 'Blogs', href: '/learn/masterclass' },
+        { label: 'Downloads', href: '/learn/masterclass' },
+        { label: "Recipe Corner", href: '/learn/blog' },
+        { label: 'Luke Learning Hub', href: '/learn/books' },
       ],
     },
     {
