@@ -53,10 +53,10 @@ const Navbar = () => {
     {
       title: 'Learn',
       links: [
-        { label: 'Blogs', href: '/learn/masterclass' },
-        { label: 'Downloads', href: '/learn/masterclass' },
-        { label: "Recipe Corner", href: '/learn/blog' },
-        { label: 'Luke Learning Hub', href: '/learn/books' },
+        { label: 'Blogs', href: '/learn/Blogs/Home' },
+        { label: 'Downloads', href: '/learn/Downloads/Home' },
+        { label: "Recipe Corner", href: '/learn/RecipeCorner/Home' },
+        { label: 'Luke Learning Hub', href: '/learn/LukeLearningHub/Home' },
       ],
     },
     {

@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../../../../assets/event1.jpg';
-import img2 from '../../../../assets/event2.jpg';
-import img3 from '../../../../assets/event3.jpg';
+import img1 from '../../../assets/event1.jpg';
+import img2 from '../../../assets/event2.jpg';
+import img3 from '../../../assets/event3.jpg';
 
 const SERVICES = [
     {
@@ -37,22 +37,7 @@ const ServicePage = () => {
     return (
         <div className="bg-[#FCFCFC] min-h-screen font-sans overflow-hidden">
 
-            {/* HEADER: Clean & Minimal */}
-            <div className="pt-24 pb-5 text-center px-6 relative">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 opacity-5 select-none">
-                    <h1 className="text-[12rem] font-black text-gray-400">IMPACT</h1>
-                </div>
-                <div className="relative z-10">
-                    <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight">
-                        Real Impact. <span className="text-orange-500">Real Workplaces.</span>
-                    </h2>
-                    <div className="w-24 h-1 bg-orange-500 mx-auto mt-6"></div>
-                    <p className="mt-8 text-gray-500 max-w-xl mx-auto text-lg font-medium leading-relaxed">
-                        A glimpse into the wellness sessions, expert talks, and lifestyle programs we've delivered across India.
-                    </p>
-                </div>
-            </div>
-
+          
             {/* SERVICES: Modern Editorial Layout */}
             <section className="max-w-7xl mx-auto py-20 px-6 space-y-48">
                 {SERVICES.map((service, index) => (

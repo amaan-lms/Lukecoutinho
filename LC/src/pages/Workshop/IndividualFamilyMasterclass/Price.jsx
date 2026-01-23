@@ -1,8 +1,8 @@
 import React from 'react';
 import { User, BookOpen } from 'lucide-react';
-import img1 from '../../../../assets/1st.webp'
-import img2 from '../../../../assets/2nd.jpg'
-import img3 from '../../../../assets/3rd.png'
+import img1 from '../../../assets/1st.webp'
+import img2 from '../../../assets/2nd.jpg'
+import img3 from '../../../assets/3rd.png'
 
 const CourseCard = ({ title, description, image, price, lessons, students, badgeText, badgeType }) => {
   return (

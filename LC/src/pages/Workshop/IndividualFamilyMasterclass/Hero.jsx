@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, Play, Award, Star } from 'lucide-react';
-import heroimg from '../../../../assets/imluke.png';
+import heroimg from '../../../assets/imluke.png';
 
 const StatCounter = ({ value, label }) => {
   const [count, setCount] = useState(0);

@@ -1,6 +1,6 @@
 import React from 'react';
 // Replace with your actual image path
-import audienceImg from '../../../../assets/EmpowerPeople.jpg'; 
+import audienceImg from '../../../assets/EmpowerPeople.jpg'; 
 
 const EmpowerSection = () => {
   return (

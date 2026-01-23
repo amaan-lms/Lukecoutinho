@@ -1,5 +1,5 @@
 import React from 'react';
-import communityImg from '../../../../assets/buildc.jpg'; 
+import communityImg from '../../../assets/buildc.jpg'; 
 
 const CommunitySection = () => {
   return (

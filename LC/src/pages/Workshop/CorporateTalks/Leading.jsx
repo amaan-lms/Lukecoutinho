@@ -1,9 +1,9 @@
 import React from 'react';
-import img1 from '../../../../assets/FitIndia.png'
-import img2 from '../../../../assets/GQ.png'
-import img3 from '../../../../assets/CeleberatedDoctors.png'
-import img4 from '../../../../assets/VOGUE.png'
-import img5 from '../../../../assets/Healthcareleadership.png'
+import img1 from '../../../assets/FitIndia.png'
+import img2 from '../../../assets/GQ.png'
+import img3 from '../../../assets/CeleberatedDoctors.png'
+import img4 from '../../../assets/VOGUE.png'
+import img5 from '../../../assets/Healthcareleadership.png'
 
 const LeadingTheWay = () => {
   const awards = [

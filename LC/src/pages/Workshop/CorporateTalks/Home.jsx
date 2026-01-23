@@ -7,6 +7,7 @@ import Events from './Events'
 import BuildC from './BuildC'
 import SuccessStories from './SuccessStories'
 import CTA from './CTA'
+import Company from './Company'
 
 
 function Home() {
@@ -18,7 +19,10 @@ function Home() {
       <EmpowerPeople />
       <Pillars />
       <Events />
+            <Company />
+
       <BuildC />
+
       <SuccessStories />
       <CTA />
 

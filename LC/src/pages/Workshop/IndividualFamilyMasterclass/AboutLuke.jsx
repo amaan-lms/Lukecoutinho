@@ -1,5 +1,5 @@
 import React from 'react';
-import lukeimg from '../../../../assets/Lukequote.png';
+import lukeimg from '../../../assets/Lukequote.png';
 
 const AboutLukeRedesign = () => {
   return (
