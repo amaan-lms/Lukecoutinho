@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 
 
-const CourseCard = ({ title, description, image, price, lessons, students, badgeText, badgeType }) => {
+const CourseCard = ({ title, description, image, price, lessons, students, badgeText, badgeType, courseId }) => {
   return (
     <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group">
       {/* Image Container */}
@@ -55,9 +55,12 @@ const CourseCard = ({ title, description, image, price, lessons, students, badge
             <span className="text-orange-500 text-lg mr-0.5">₹</span>{price}
           </div>
         </div>
-        <button className="bg-orange-500 hover:bg-gray-800 text-white px-7 py-3 rounded-xl text-sm font-bold transition-all duration-300 shadow-md shadow-orange-100 hover:shadow-gray-200">
+        <NavLink
+          to={`/Workshop/IndividualFamilyMasterclass/Course${courseId}`}
+          className="bg-orange-500 hover:bg-gray-800 text-white px-7 py-3 rounded-xl text-sm font-bold transition-all duration-300 shadow-md shadow-orange-100 hover:shadow-gray-200"
+        >
           Enroll Now
-        </button>
+        </NavLink>
       </div>
     </div>
   );
@@ -126,7 +129,7 @@ export default function MasterclassSection() {
         {/* Course Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {courses.map((course, index) => (
-            <CourseCard key={index} {...course} />
+            <CourseCard key={index} {...course} courseId={index + 1} />
           ))}
         </div>
 
