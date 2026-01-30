@@ -8,6 +8,8 @@ import Vision from './pages/About/Vision'
 import IndividualFamilyMasterclass from './pages/Workshop/IndividualFamilyMasterclass/Home'
 import CorporateTalks from './pages/Workshop/CorporateTalks/Home'
 import Blogs from './pages/Learn/Blogs/Home'
+import Learninghub from './pages/Learn/Learninghub/Home'
+
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
             <Route path="/Workshop/IndividualFamilyMasterclass/Home" element={<IndividualFamilyMasterclass />} />
             <Route path="/Workshop/CorporateTalks/Home" element={<CorporateTalks />} />
             <Route path="/Learn/Blogs/Home" element={<Blogs />} />
+            <Route path="/Learn/Learninghub/Home" element={<Learninghub />} />
+
+            
           </Routes>
         </main>
         <Footer />
