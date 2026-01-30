@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
-import heroBg from "../../../assets/learning-hub/learning-hub-hero.png";
+import heroBg from "../../../assets/learning-hub/hero/learning-hub-hero.png";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
