@@ -80,12 +80,12 @@ const LearningIntro = () => {
             </ul>
 
             <div className="p-5 bg-orange-50 border-l-4 border-orange-500 rounded-r-xl">
-              <p className="text-sm text-slate-700 font-medium mb-2">
+              <p className="text-[1rem] text-slate-700 font-medium mb-2">
                 Need personalized guidance?
               </p>
               <a
                 href="/programs"
-                className="group inline-flex items-center gap-2 text-orange-600 font-bold uppercase text-xs tracking-wider hover:text-orange-800 transition-colors"
+                className="group inline-flex items-center gap-2 text-orange-600 font-bold uppercase text-[1.5rem] tracking-wider hover:text-orange-800 transition-colors"
               >
                 Explore 1-on-1 Coaching{" "}
                 <ArrowRight
