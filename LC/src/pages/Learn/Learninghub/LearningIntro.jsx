@@ -11,83 +11,130 @@ import {
   Droplet,
   ArrowRight,
   Leaf,
+  Info,
+  CheckCircle2,
 } from "lucide-react";
 
 const LearningIntro = () => {
   const categories = [
-    { name: "Mental Wellness", icon: <Brain size={20} /> },
-    { name: "Women's Health", icon: <Heart size={20} /> },
-    { name: "Men's Health", icon: <Activity size={20} /> },
-    { name: "Digestion", icon: <Utensils size={20} /> },
-    { name: "Immunity", icon: <ShieldCheck size={20} /> },
-    { name: "Diabetes", icon: <Droplet size={20} /> },
-    { name: "Cancer", icon: <Leaf size={20} /> }, // Using Leaf/Ribbon metaphor
-    { name: "Sleep", icon: <Moon size={20} /> },
-    { name: "Nutrition", icon: <Utensils size={20} /> },
-    { name: "Gut Health", icon: <Activity size={20} /> },
-    { name: "Family Health", icon: <Users size={20} /> },
-    { name: "Hindi Courses", icon: <Languages size={20} /> },
+    { name: "Mental Wellness", icon: <Brain size={18} /> },
+    { name: "Women's Health", icon: <Heart size={18} /> },
+    { name: "Men's Health", icon: <Activity size={18} /> },
+    { name: "Digestion", icon: <Utensils size={18} /> },
+    { name: "Immunity", icon: <ShieldCheck size={18} /> },
+    { name: "Diabetes", icon: <Droplet size={18} /> },
+    { name: "Cancer Care", icon: <Leaf size={18} /> },
+    { name: "Sleep", icon: <Moon size={18} /> },
+    { name: "Nutrition", icon: <Utensils size={18} /> },
+    { name: "Gut Health", icon: <Activity size={18} /> },
+    { name: "Family Health", icon: <Users size={18} /> },
+    { name: "Hindi Courses", icon: <Languages size={18} /> },
   ];
 
   return (
-    <section className="py-16 bg-slate-50 relative">
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
-        <div className="bg-white rounded-[2.5rem] shadow-xl shadow-slate-200/60 p-8 md:p-14 lg:p-16 text-center border-t-8 border-teal-400 relative overflow-hidden mb-20">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-teal-400 to-orange-300"></div>
+    <section className="py-20 bg-white relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-slate-50/50 -skew-x-12 translate-x-20 z-0"></div>
 
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-8">
-            Learn with <span className="text-teal-500">Purpose.</span> Live with{" "}
-            <span className="text-orange-500">Clarity.</span>
-          </h2>
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 mb-6">
+              <span className="w-8 h-1 bg-orange-500 rounded-full"></span>
+              <span className="text-orange-600 font-bold uppercase tracking-widest text-2xl">
+                Our Philosophy
+              </span>
+            </div>
 
-          <div className="max-w-4xl mx-auto space-y-6 text-slate-600 text-lg leading-relaxed">
-            <p>
-              Whether you wish to take the first step to your health goals or
-              are already living with symptoms and a diagnosis, these courses
-              are your starting point for making sense of it all. We unpack
-              complex health conditions into bite-sized information to give you
-              simple actions and better questions to carry into your next
-              consult, program, or treatment.
-            </p>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
+              Knowledge is the <br />
+              <span className="text-orange-600">First Step to Healing.</span>
+            </h2>
 
-            <p className="text-slate-500 italic text-base">
-              These self-paced, educational courses offer awareness and general
-              guidance, not personalized coaching or treatment, and are meant to
-              support – never replace – the care you receive from your medical
-              team.
-            </p>
-          </div>
+            <div className="space-y-6 text-slate-600 text-lg leading-relaxed mb-8">
+              <p>
+                Confusion is the enemy of recovery. We bridge the gap between
+                complex medical jargon and actionable lifestyle changes.
+              </p>
+              <p>
+                Our bite-sized modules are designed to empower you with the
+                right questions for your doctor and simple, science-backed steps
+                for your daily routine.
+              </p>
+            </div>
 
-          <div className="mt-10">
-            <p className="text-slate-700 font-medium mb-2">
-              Looking to join our one-on-one Wellness Program?
-            </p>
-            <a
-              href="/programs"
-              className="text-orange-500 font-bold hover:text-orange-600 uppercase tracking-widest text-sm inline-flex items-center gap-2 transition-all hover:gap-3"
-            >
-              Click Here to Know More <ArrowRight size={16} />
-            </a>
-          </div>
-        </div>
+            <ul className="space-y-3 mb-10">
+              <li className="flex items-start gap-3 text-slate-700 font-medium">
+                <CheckCircle2
+                  className="text-teal-500 shrink-0 mt-1"
+                  size={20}
+                />
+                <span>Self-paced learning structure</span>
+              </li>
+              <li className="flex items-start gap-3 text-slate-700 font-medium">
+                <CheckCircle2
+                  className="text-teal-500 shrink-0 mt-1"
+                  size={20}
+                />
+                <span>Holistic & Integrative approach</span>
+              </li>
+            </ul>
 
-        <div className="text-center">
-          <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-10">
-            Explore Our <span className="text-teal-500">Courses</span>
-          </h3>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((cat, index) => (
-              <button
-                key={index}
-                className="flex items-center gap-3 px-6 py-4 bg-white border border-slate-200 rounded-xl text-slate-700 font-bold hover:border-teal-500 hover:text-teal-600 hover:shadow-lg transition-all duration-300 group"
+            <div className="p-5 bg-orange-50 border-l-4 border-orange-500 rounded-r-xl">
+              <p className="text-sm text-slate-700 font-medium mb-2">
+                Need personalized guidance?
+              </p>
+              <a
+                href="/programs"
+                className="group inline-flex items-center gap-2 text-orange-600 font-bold uppercase text-xs tracking-wider hover:text-orange-800 transition-colors"
               >
-                <span className="text-slate-400 group-hover:text-teal-500 transition-colors">
-                  {cat.icon}
-                </span>
-                {cat.name}
-              </button>
-            ))}
+                Explore 1-on-1 Coaching{" "}
+                <ArrowRight
+                  size={16}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
+              </a>
+            </div>
+
+            <p className="mt-6 text-xs text-slate-400 flex gap-2 items-start">
+              <Info size={14} className="shrink-0 mt-0.5" />
+              These courses are educational and support—not replace—your medical
+              treatment.
+            </p>
+          </div>
+
+          <div className="lg:col-span-7">
+            <div className="bg-slate-100 rounded-[2.5rem] p-8 md:p-12 relative">
+              <div className="mb-8 flex items-end justify-between">
+                <div>
+                  <h3 className="text-4xl font-black text-slate-900">
+                    Explore Our Courses
+                  </h3>
+                  <p className="text-slate-500 mt-1">
+                    Select a category to begin learning
+                  </p>
+                </div>
+
+                <div className="hidden sm:block text-slate-200">
+                  <Brain size={48} strokeWidth={1.5} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+                {categories.map((cat, index) => (
+                  <button
+                    key={index}
+                    className="group flex items-center gap-4 px-5 py-4 bg-white rounded-2xl shadow-sm border border-transparent hover:border-teal-100 hover:shadow-md transition-all duration-300 text-left"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
+                      {cat.icon}
+                    </div>
+                    <span className="font-bold text-slate-700 group-hover:text-slate-900">
+                      {cat.name}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
