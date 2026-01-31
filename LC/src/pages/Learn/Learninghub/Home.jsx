@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import LearningIntro from "./LearningIntro";
 import FeaturedCourses from "./FeaturedCourses";
 import LearningExperience from "./LearningExperience";
+import FAQ from "./FAQ";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <LearningIntro/>
       <FeaturedCourses/>
       <LearningExperience/>
+      <FAQ/>
     </>
   );
 }

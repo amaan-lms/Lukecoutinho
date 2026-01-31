@@ -238,12 +238,12 @@ const FeaturedCourses = () => {
                       <div className="w-6 h-6 rounded-full bg-slate-100 flex items-center justify-center text-slate-400">
                         <Users size={12} />
                       </div>
-                      <span className="text-[10px] text-slate-500 font-bold">
+                      <span className="text-[12px] text-slate-500 font-bold">
                         {course.author}
                       </span>
                     </div>
 
-                    <p className="text-slate-500 text-[11px] leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-slate-500 text-[13px] leading-relaxed mb-6 line-clamp-3 font-medium">
                       {course.description}
                     </p>
 
