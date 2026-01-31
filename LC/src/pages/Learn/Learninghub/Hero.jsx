@@ -28,7 +28,7 @@ const Hero = () => {
           className="w-full h-full object-cover object-center md:object-top"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-transparent"></div>
       </div>
 
       <div className="relative z-10 h-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 flex flex-col justify-center">

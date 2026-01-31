@@ -185,7 +185,7 @@ const FeaturedCourses = () => {
           </div>
         </div>
 
-        <div className="relative min-h-[550px]">
+        <div className="relative min-h-137.5">
           <AnimatePresence initial={false} custom={direction} mode="wait">
             <motion.div
               key={currentPage}
@@ -204,7 +204,7 @@ const FeaturedCourses = () => {
                 <motion.div
                   key={course.id}
                   whileHover={{ y: -5 }}
-                  className="bg-white rounded-[2rem] overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group"
+                  className="bg-white rounded-4xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group"
                 >
                   <div className="relative h-48 overflow-hidden bg-slate-100">
                     <img
