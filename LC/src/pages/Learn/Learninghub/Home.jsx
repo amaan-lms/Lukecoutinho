@@ -4,6 +4,8 @@ import LearningIntro from "./LearningIntro";
 import FeaturedCourses from "./FeaturedCourses";
 import LearningExperience from "./LearningExperience";
 import FAQ from "./FAQ";
+import HowItWorks from "./HowItWorks";
+import GiftBanner from "./GiftBanner";
 
 function Home() {
   return (
@@ -13,6 +15,8 @@ function Home() {
       <FeaturedCourses/>
       <LearningExperience/>
       <FAQ/>
+      <HowItWorks/>
+      <GiftBanner/>
     </>
   );
 }
