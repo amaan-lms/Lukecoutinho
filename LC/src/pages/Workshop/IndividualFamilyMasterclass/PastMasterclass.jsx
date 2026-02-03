@@ -189,6 +189,7 @@ export default function MasterclassSection() {
             description: "Have you ever felt your chest tighten for no obvious reason? Or struggled with restless nights, snapping at loved ones[…]",
             image: img15, price: "699.00", lessons: 19, students: 23, badgeText: "Featured", badgeType: "featured",
         },
+       
     ];
 
     return (

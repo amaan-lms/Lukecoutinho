@@ -25,6 +25,10 @@ import Course12 from './pages/Workshop/IndividualFamilyMasterclass/Course12'
 import Course13 from './pages/Workshop/IndividualFamilyMasterclass/Course13'
 import Course14 from './pages/Workshop/IndividualFamilyMasterclass/Course14'
 import Course15 from './pages/Workshop/IndividualFamilyMasterclass/Course15'
+import Course16 from './pages/Workshop/IndividualFamilyMasterclass/Course16'
+import Podcast from './pages/Podcast/Podcast'
+import Careers from './pages/Careers/Careers'
+import ContactUs from './pages/ContactUs/ContactUs'
 
 function App() {
   return (
@@ -54,8 +58,12 @@ function App() {
             <Route path="/Workshop/IndividualFamilyMasterclass/Course13" element={<Course13 />} />
             <Route path="/Workshop/IndividualFamilyMasterclass/Course14" element={<Course14 />} />
             <Route path="/Workshop/IndividualFamilyMasterclass/Course15" element={<Course15 />} />
+            <Route path="/Workshop/IndividualFamilyMasterclass/Course16" element={<Course16 />} />
             <Route path="/Workshop/CorporateTalks/Home" element={<CorporateTalks />} />
             <Route path="/Learn/Blogs/Home" element={<Blogs />} />
+            <Route path="/Podcast/Podcast" element={<Podcast />} />
+            <Route path="/Careers/Careers" element={<Careers />} />
+            <Route path="/ContactUs/ContactUs" element={<ContactUs />} />
           </Routes>
         </main>
         <Footer />
