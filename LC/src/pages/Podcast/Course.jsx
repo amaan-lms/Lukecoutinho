@@ -137,7 +137,7 @@ const CourseSection = () => {
         {/* --- FOOTER CTA --- */}
 
         <div className="mt-16 text-center">
-          <NavLink to="/courses">
+          <NavLink to="/learn/Learninghub/Home">
             <motion.button
               whileHover={{ scale: 1.05 }}
               className="bg-slate-900 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-orange-500 transition-all shadow-xl shadow-gray-200"

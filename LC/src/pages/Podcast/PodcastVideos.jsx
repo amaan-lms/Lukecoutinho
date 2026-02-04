@@ -10,7 +10,7 @@ import DhruvGupta from '../../assets/Podcast/DhruvGupta.jpg';
 import DrNozerSherier from '../../assets/Podcast/DrNozerSherier.jpg';
 import Sister from '../../assets/Podcast/Sister.png';
 import DrAnil from '../../assets/Podcast/DrAnil.png';
-import DrWilliam1 from '../../assets/Podcast/DrWilliam.png';
+import William from '../../assets/Podcast/william.png';
 
 
 
@@ -22,7 +22,7 @@ const EpisodeGrid = () => {
     //season 1
     { title: "The Conscious Shift - Mastering the Mind: In Control or Under Control?", guest: "Sister BK Shivani / 6 June, 2025", season: "Season 1", link: "https://youtu.be/40VTUMsZ5Uc", image: Sister },
     { title: "Analyzing the Roots of Head and Neck Cancers: Causes and Lifestyle-Based Preventive Measures", guest: "Dr. Anil D’Cruz / 6 June, 2025", season: "Season 1", link: "https://www.youtube.com/watch?v=vP2gEY8lPH4", image: DrAnil },
-    { title: "Wellness Blueprint: Navigating Immunity, DNA Resilience, Stem Cells, Microbiome & Angiogenesis", guest: "Dr. William Li / 6 June, 2025", season: "Season 1", link: "https://www.youtube.com/watch?v=OQ2H0WCuRdc", image: DrWilliam1 },
+    { title: "Wellness Blueprint: Navigating Immunity, DNA Resilience, Stem Cells, Microbiome & Angiogenesis", guest: "Dr. William Li / 6 June, 2025", season: "Season 1", link: "https://www.youtube.com/watch?v=OQ2H0WCuRdc", image: William },
 
 
     //seasone 2
