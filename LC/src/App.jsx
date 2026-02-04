@@ -27,6 +27,7 @@ import Course14 from './pages/Workshop/IndividualFamilyMasterclass/Course14'
 import Course15 from './pages/Workshop/IndividualFamilyMasterclass/Course15'
 import Course16 from './pages/Workshop/IndividualFamilyMasterclass/Course16'
 import Podcast from './pages/Podcast/Podcast'
+import PodcastVideos from './pages/Podcast/PodcastVideos'
 import Careers from './pages/Careers/Careers'
 import ContactUs from './pages/ContactUs/ContactUs'
 
@@ -62,6 +63,7 @@ function App() {
             <Route path="/Workshop/CorporateTalks/Home" element={<CorporateTalks />} />
             <Route path="/Learn/Blogs/Home" element={<Blogs />} />
             <Route path="/Podcast/Podcast" element={<Podcast />} />
+            <Route path="/Podcast/Podcast/PodcastVideos" element={<PodcastVideos />} />
             <Route path="/Careers/Careers" element={<Careers />} />
             <Route path="/ContactUs/ContactUs" element={<ContactUs />} />
           </Routes>

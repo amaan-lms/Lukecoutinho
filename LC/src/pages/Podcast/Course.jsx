@@ -4,6 +4,9 @@ import { PlayCircle, Users, BookOpen, Star, ArrowRight } from 'lucide-react';
 import c1 from '../../assets/podcastc1.png'
 import c2 from '../../assets/podcastc2.jpg'
 import c3 from '../../assets/podcastc3.jpg'
+import { NavLink } from "react-router-dom";
+
+
 
 const CourseSection = () => {
   const courses = [
@@ -38,7 +41,7 @@ const CourseSection = () => {
   return (
     <section className="py-15 bg-white px-6">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* --- HEADER --- */}
         <div className="text-center mb-16 space-y-6">
           <div className="flex items-center justify-center gap-3">
@@ -47,7 +50,7 @@ const CourseSection = () => {
             <span className="h-[2px] w-12 bg-orange-500"></span>
           </div>
           <h2 className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-tight">
-            Your Space to <br/>
+            Your Space to <br />
             <span className="text-orange-400 italic  lowercase font-light text-6xl md:text-7xl">Learn, Heal, and Grow</span>
           </h2>
           <p className="max-w-3xl mx-auto text-gray-500 font-medium leading-relaxed">
@@ -58,20 +61,20 @@ const CourseSection = () => {
         {/* --- COURSE GRID --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, idx) => (
-            <motion.div 
+            <motion.div
               key={idx}
               whileHover={{ y: -8 }}
               className="bg-gray-50 rounded-[2.5rem] overflow-hidden border border-gray-100 flex flex-col h-full hover:shadow-2xl hover:shadow-orange-900/5 transition-all duration-500 group"
             >
               {/* Image Thumbnail */}
               <div className="relative aspect-video overflow-hidden">
-                <img 
-                  src={course.image} 
+                <img
+                  src={course.image}
                   alt={course.title}
                   className="w-full h-full object-cover transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-slate-900/0 transition-colors" />
-                
+
                 {/* Featured Badge */}
                 <div className="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg">
                   Featured
@@ -132,13 +135,16 @@ const CourseSection = () => {
         </div>
 
         {/* --- FOOTER CTA --- */}
+
         <div className="mt-16 text-center">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            className="bg-slate-900 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-orange-500 transition-all shadow-xl shadow-gray-200"
-          >
-            Explore All Courses
-          </motion.button>
+          <NavLink to="/courses">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="bg-slate-900 text-white px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] hover:bg-orange-500 transition-all shadow-xl shadow-gray-200"
+            >
+              Explore All Courses
+            </motion.button>
+          </NavLink>
         </div>
 
       </div>
