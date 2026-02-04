@@ -59,13 +59,7 @@ const Navbar = () => {
         { label: 'Luke Learning Hub', href: '/learn/Learninghub/Home' },
       ],
     },
-    {
-      title: 'Podcast',
-      links: [
-        { label: 'Spotify', href: '/podcast/spotify' },
-        { label: 'YouTube Episodes', href: '/podcast/youtube' },
-      ],
-    },
+  
     {
       title: 'Bharat',
       links: [
@@ -123,7 +117,11 @@ const Navbar = () => {
               </div>
             ))}
 
-            <Link to="/careers" className="px-2.5 py-2 text-[16px] font-bold text-slate-700 hover:text-orange-500 transition-all rounded-lg hover:bg-slate-50">
+            <Link to="/Podcast/Podcast" className="px-2.5 py-2 text-[16px] font-bold text-slate-700 hover:text-orange-500 transition-all rounded-lg hover:bg-slate-50">
+              Podcast
+            </Link>
+
+            <Link to="/Careers/Careers" className="px-2.5 py-2 text-[16px] font-bold text-slate-700 hover:text-orange-500 transition-all rounded-lg hover:bg-slate-50">
               Careers
             </Link>
           </div>
@@ -140,7 +138,7 @@ const Navbar = () => {
             </div>
 
             <Link
-              to="/contact"
+              to="/ContactUs/ContactUs"
               className="hidden md:flex bg-slate-900 text-white px-5 py-2 rounded-full text-[12px] font-bold hover:bg-orange-500 transition-all duration-300 shadow-lg shadow-slate-100 active:scale-95 whitespace-nowrap"
             >
               Contact Us
@@ -225,7 +223,14 @@ const Navbar = () => {
               ))}
 
               <a
-                href="/careers"
+                href="/Podcast/Podcast"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center px-4 py-3.5 text-base font-bold text-slate-900 rounded-2xl hover:bg-slate-50 transition-colors"
+              >
+                Podcast
+              </a>
+              <a
+                href="/Careers/Careers"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center px-4 py-3.5 text-base font-bold text-slate-900 rounded-2xl hover:bg-slate-50 transition-colors"
               >

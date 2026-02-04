@@ -3,21 +3,23 @@ import { User, BookOpen } from 'lucide-react';
 import img1 from '../../../assets/1st.webp'
 import img2 from '../../../assets/2nd.jpg'
 import img3 from '../../../assets/3rd.png'
+import { NavLink } from "react-router-dom";
 
-const CourseCard = ({ title, description, image, price, lessons, students, badgeText, badgeType }) => {
+
+
+const CourseCard = ({ title, description, image, price, lessons, students, badgeText, badgeType, courseId }) => {
   return (
     <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col group">
       {/* Image Container */}
       <div className="relative h-56 overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
+        <img
+          src={image}
+          alt={title}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
         {/* Modern Badge - Using Orange and Gray */}
-        <div className={`absolute top-4 left-4 px-3 py-1 text-[10px] tracking-widest font-black text-white rounded-full shadow-lg ${
-          badgeType === 'updated' ? 'bg-gray-600' : 'bg-orange-500'
-        }`}>
+        <div className={`absolute top-4 left-4 px-3 py-1 text-[10px] tracking-widest font-black text-white rounded-full shadow-lg ${badgeType === 'updated' ? 'bg-gray-600' : 'bg-orange-500'
+          }`}>
           {badgeText.toUpperCase()}
         </div>
       </div>
@@ -27,7 +29,7 @@ const CourseCard = ({ title, description, image, price, lessons, students, badge
         <h3 className="text-xl font-bold text-gray-800 leading-snug mb-3 group-hover:text-orange-500 transition-colors duration-300">
           {title}
         </h3>
-        
+
         <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3">
           {description}
         </p>
@@ -53,9 +55,12 @@ const CourseCard = ({ title, description, image, price, lessons, students, badge
             <span className="text-orange-500 text-lg mr-0.5">₹</span>{price}
           </div>
         </div>
-        <button className="bg-orange-500 hover:bg-gray-800 text-white px-7 py-3 rounded-xl text-sm font-bold transition-all duration-300 shadow-md shadow-orange-100 hover:shadow-gray-200">
+        <NavLink
+          to={`/Workshop/IndividualFamilyMasterclass/Course${courseId}`}
+          className="bg-orange-500 hover:bg-gray-800 text-white px-7 py-3 rounded-xl text-sm font-bold transition-all duration-300 shadow-md shadow-orange-100 hover:shadow-gray-200"
+        >
           Enroll Now
-        </button>
+        </NavLink>
       </div>
     </div>
   );
@@ -112,23 +117,30 @@ export default function MasterclassSection() {
               Luke's previous masterclasses now accessible as self-paced learning modules.
             </p>
           </div>
-          <button className="hidden md:block border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-8 py-3 rounded-xl font-bold transition-all duration-300">
+          <NavLink
+            to="/Workshop/IndividualFamilyMasterclass/PastMasterclass"
+            className="hidden md:block border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white px-8 py-3 rounded-xl font-bold transition-all duration-300 text-center"
+          >
             Explore All
-          </button>
+          </NavLink>
+
         </div>
 
         {/* Course Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {courses.map((course, index) => (
-            <CourseCard key={index} {...course} />
+            <CourseCard key={index} {...course} courseId={index + 1} />
           ))}
         </div>
 
         {/* Mobile View Button */}
         <div className="mt-12 text-center md:hidden">
-          <button className="w-full border-2 border-gray-800 text-gray-800 py-4 rounded-xl font-bold">
+          <NavLink
+            to="/Workshop/IndividualFamilyMasterclass/PastMasterclass"
+            className="inline-block w-full border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white py-4 rounded-xl font-bold transition-all duration-300"
+          >
             Explore More Courses
-          </button>
+          </NavLink>
         </div>
       </div>
     </section>
