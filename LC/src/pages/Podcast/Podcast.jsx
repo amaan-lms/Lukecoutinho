@@ -9,6 +9,7 @@ import Course from './Course'
 import Insights from './Insights'
 import HelpUs from './HelpUs'
 import Joinourcommunity from './Joinourcommunity'
+import SocialChannels from './SocialChannels'
 
 function Home() {
 
@@ -24,6 +25,7 @@ function Home() {
       <Insights />
       <HelpUs />
       <Joinourcommunity />
+      <SocialChannels />
         
     </>
   )
