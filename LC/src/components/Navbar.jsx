@@ -56,7 +56,7 @@ const Navbar = () => {
         { label: 'Blogs', href: '/learn/Blogs/Home' },
         { label: 'Downloads', href: '/learn/Downloads/Home' },
         { label: "Recipe Corner", href: '/learn/RecipeCorner/Home' },
-        { label: 'Luke Learning Hub', href: '/learn/LukeLearningHub/Home' },
+        { label: 'Luke Learning Hub', href: '/learn/Learninghub/Home' },
       ],
     },
   

@@ -9,6 +9,8 @@ import Vision from './pages/About/Vision'
 import IndividualFamilyMasterclass from './pages/Workshop/IndividualFamilyMasterclass/Home'
 import CorporateTalks from './pages/Workshop/CorporateTalks/Home'
 import Blogs from './pages/Learn/Blogs/Home'
+import Learninghub from './pages/Learn/Learninghub/Home'
+
 import PastMasterclass from './pages/Workshop/IndividualFamilyMasterclass/PastMasterclass'
 import Course1 from './pages/Workshop/IndividualFamilyMasterclass/Course1'
 import Course2 from './pages/Workshop/IndividualFamilyMasterclass/Course2'
@@ -61,6 +63,9 @@ function App() {
             <Route path="/Workshop/IndividualFamilyMasterclass/Course16" element={<Course16 />} />
             <Route path="/Workshop/CorporateTalks/Home" element={<CorporateTalks />} />
             <Route path="/Learn/Blogs/Home" element={<Blogs />} />
+            <Route path="/Learn/Learninghub/Home" element={<Learninghub />} />
+
+            
             <Route path="/Podcast/Podcast" element={<Podcast />} />
             <Route path="/Careers/Careers" element={<Careers />} />
             <Route path="/ContactUs/ContactUs" element={<ContactUs />} />
