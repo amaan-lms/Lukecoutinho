@@ -154,9 +154,9 @@ const LearningIntro = () => {
                     variants={fadeInUp}
                     whileHover={{ scale: 1.03, y: -2 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group flex items-center gap-4 px-5 py-4 bg-white rounded-2xl shadow-sm border border-transparent hover:border-teal-100 hover:shadow-md transition-all duration-300 text-left"
+                    className="group flex items-center gap-4 px-5 py-4 bg-white rounded-2xl shadow-sm border border-transparent hover:border-orange-500 hover:shadow-md transition-all duration-300 text-left"
                   >
-                    <div className="w-10 h-10 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center group-hover:bg-teal-50 group-hover:text-teal-600 transition-colors">
+                    <div className="w-10 h-10 rounded-full bg-slate-50 text-slate-400 flex items-center justify-center group-hover:bg-orange-50 group-hover:text-orange-600 transition-colors">
                       {cat.icon}
                     </div>
                     <span className="font-bold text-slate-700 group-hover:text-slate-900">

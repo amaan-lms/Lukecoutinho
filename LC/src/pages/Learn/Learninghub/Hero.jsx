@@ -1,57 +1,59 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 import heroBg from "../../../assets/learning-hub/hero/learning-hub-hero.png";
 
 const Hero = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const handleScrollToCourses = () => {
-    const element = document.getElementById("programs-section");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <section
-      className={`relative h-[85vh] w-full overflow-hidden bg-slate-900 transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}
-    >
+    <section className="relative min-h-screen w-full bg-[#1a1a1a] overflow-hidden flex items-center">
       <div className="absolute inset-0 z-0">
         <img
           src={heroBg}
-          alt="Luke Coutinho Learning Hub"
-          className="w-full h-full object-cover object-center md:object-top"
+          alt="Luke Coutinho"
+          className="w-full h-full object-cover object-center lg:object-right"
         />
-
-        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-[#1a1a1a] via-[#1a1a1a]/70 to-transparent" />
       </div>
-
-      <div className="relative z-10 h-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 flex flex-col justify-center">
-        <div className="max-w-2xl transform transition-all duration-1000 translate-y-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
-            Luke’s Learning Hub
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-12 lg:px-16">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-0.5 w-10 bg-orange-500"></span>
+            <span className="text-orange-500 font-black uppercase tracking-[0.3em] text-[11px]">
+              Welcome to the Hub
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[0.95] mb-8">
+            Luke’s <br />
+            <span className="text-orange-500">Learning</span> Hub
           </h1>
-
-          <p className="text-lg md:text-xl text-slate-100 mb-8 font-medium leading-relaxed opacity-90">
-            Your Journey to Better Health Begins with the Right Knowledge
+          <p className="text-slate-200 text-lg md:text-xl mb-12 max-w-lg leading-relaxed font-medium">
+            Your journey to better health begins with the right knowledge.
+            Explore science-backed, lifestyle-first education designed for your
+            everyday reality.
           </p>
-
-          <button
-            onClick={handleScrollToCourses}
-            className="group bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-md transition-all duration-300 shadow-lg shadow-orange-500/30 flex items-center gap-2"
-          >
-            Explore Courses
-            <ArrowRight
-              size={18}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </button>
-        </div>
+          <div className="flex">
+            <button
+              onClick={() =>
+                document
+                  .getElementById("programs-section")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+              className="bg-orange-500 text-white px-10 py-5 rounded-full font-black text-xs uppercase tracking-widest shadow-2xl hover:bg-white hover:text-[#1a1a1a] transition-all transform hover:-translate-y-1 flex items-center gap-3 group"
+            >
+              Explore Courses
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-2 transition-transform"
+              />
+            </button>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

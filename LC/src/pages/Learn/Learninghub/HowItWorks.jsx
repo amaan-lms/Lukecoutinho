@@ -55,7 +55,7 @@ const HowItWorks = () => {
               viewport={{ once: true }}
               className={`relative p-8 pt-12 border-2 ${step.color} rounded-4xl text-center flex flex-col items-center h-full hover:shadow-xl transition-all duration-300`}
             >
-              {/* Step Badge */}
+
               <div
                 className={`absolute -top-5 left-1/2 -translate-x-1/2 ${step.bg} text-white px-4 py-1 rounded-lg flex flex-col items-center shadow-lg`}
               >
@@ -68,10 +68,10 @@ const HowItWorks = () => {
               </div>
 
               <div className="mb-6 opacity-80">{step.icon}</div>
-              <h3 className="text-xl font-black text-slate-800 mb-4">
+              <h3 className="text-[1.5rem] font-black text-slate-800 mb-4">
                 {step.title}
               </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
+              <p className="text-slate-500 text-sm  font-bold leading-relaxed">
                 {step.desc}
               </p>
             </motion.div>

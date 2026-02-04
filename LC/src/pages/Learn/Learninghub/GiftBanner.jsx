@@ -16,7 +16,7 @@ const GiftBanner = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-white max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Support a <span className="text-teal-400">Loved One's</span> Journey. Gift Clarity. Gift Better Health.
+              Support a <span className="text-orange-600">Loved One's</span> Journey. Gift Clarity. Gift Better Health.
             </h2>
             <p className="text-slate-300 text-lg">
               A course gift can be the nudge they need to feel seen, informed, and ready to take charge of their own wellbeing.
