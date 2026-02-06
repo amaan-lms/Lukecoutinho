@@ -8,12 +8,12 @@ const LatestPodcast = () => {
     <section className="py-15 bg-slate-900 px-6 overflow-hidden relative">
       {/* Decorative Background Element */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-orange-500/5 blur-[120px] pointer-events-none" />
-      
+
       <div className="max-w-5xl mx-auto relative z-10">
-        
+
         {/* --- HEADER --- */}
         <div className="text-center mb-16 space-y-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="flex items-center justify-center gap-3"
@@ -21,28 +21,28 @@ const LatestPodcast = () => {
             <Headphones className="text-orange-500" size={20} />
             <span className="text-orange-500 font-black uppercase tracking-[0.4em] text-[10px]">New Release</span>
           </motion.div>
-          
+
           <h2 className="text-5xl md:text-6xl font-black text-white tracking-tighter uppercase leading-none">
-            Explore the Latest <br/>
+            Explore the Latest <br />
             <span className="text-orange-500 italic  lowercase font-light">From the Podcast</span>
           </h2>
-          
+
           <p className="text-gray-400 font-medium tracking-wide">
             Never miss an episode. Listen anytime, on the go.
           </p>
         </div>
 
         {/* --- CUSTOM PLAYER CARD --- */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           className="bg-white rounded-[3rem] p-4 md:p-8 shadow-2xl shadow-orange-950/20 flex flex-col md:flex-row items-center gap-8"
         >
           {/* Cover Art */}
           <div className="relative group w-full md:w-64 aspect-square shrink-0">
-            <img 
+            <img
               src={img}
-              alt="The Luke Coutinho Show" 
+              alt="The Luke Coutinho Show"
               className="w-full h-full object-cover rounded-[2rem] shadow-lg"
             />
             <div className="absolute inset-0 bg-orange-500/20 opacity-0 group-hover:opacity-100 transition-opacity rounded-[2rem] flex items-center justify-center">
@@ -64,7 +64,7 @@ const LatestPodcast = () => {
             {/* Simulated Waveform derived from original image */}
             <div className="relative h-16 w-full flex items-end gap-[3px]">
               {[...Array(40)].map((_, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   animate={{ height: [15, Math.random() * 40 + 10, 15] }}
                   transition={{ repeat: Infinity, duration: 1.5, delay: i * 0.05 }}
@@ -99,15 +99,18 @@ const LatestPodcast = () => {
 
         {/* --- FOOTER CTA --- */}
         <div className="mt-10 text-center">
-          <motion.button 
+          <motion.a
+            href="https://open.spotify.com/show/4svZdJowSdS4Go4Ei5zYcw?si=7AhYTfpUSlKbTJuO5OepGA&nd=1&dlsi=790c7c86b2d846ae" 
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-4 px-12 py-5 rounded-full border-2 border-white/20 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-white hover:text-slate-900 transition-all"
           >
             Listen On Spotify
             <div className="w-2 h-2 rounded-full bg-orange-500" />
-          </motion.button>
+          </motion.a>
         </div>
+
 
       </div>
     </section>

@@ -2,12 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock } from 'lucide-react';
 
+import img1 from '../../assets/s_cancer.jpg'; 
 const InsightsSection = () => {
   const articles = [
     {
       date: "23 January, 2026",
       title: "Stomach Cancer at 60: Atul's Journey from Liquid Diet to Full Remission",
-      image: "/path-to-atul-image.jpg", // From image_b62afd.jpg
+      image: img1,
       size: "large"
     },
     {
